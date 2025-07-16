@@ -19,4 +19,5 @@ int main(){
         pattern15(n);
         cout<<"\n";
     }
+    return 0;
 }
