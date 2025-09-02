@@ -1,21 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-int missing(vector<int>&arr,int n){
-    int XOR1=0,XOR2=0;
+bool check(vector<int>&arr,int n){
+    int count=0;
     for(int i=0;i<n;i++){
-        XOR2=XOR2^arr[i];
-        XOR1=XOR1^(i+1);
+        if(arr[i]>arr[(i+1)%n]){
+            count++;
+        }
     }
-    return XOR1^XOR2;
+    return count<=1;
 }
 int main(){
     int n;
     cin>>n;
     vector<int>arr(n);
     for(int i=0;i<n;i++){
-        cin>>arr[i];  
+        cin>>arr[i];
     }
-    int res=missing(arr,n);
+    int res=check(arr,n);
     cout<<res;
     return 0;
 }
