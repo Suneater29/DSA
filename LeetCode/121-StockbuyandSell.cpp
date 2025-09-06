@@ -8,7 +8,7 @@ int maxProfit(vector<int>&arr,int n){
         Profitmax=max(Profitmax,i-Profitmin);
     }
     return Profitmax;
-}
+}x
 int main(){
     int n;
     cin>>n;
