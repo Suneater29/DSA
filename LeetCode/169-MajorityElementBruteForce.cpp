@@ -1,3 +1,4 @@
+//this below is the brute force solution and although it is correct , but it's time comeplexity is high
 #include<bits/stdc++.h>
 using namespace std;
 int mElement(vector<int>&arr){
