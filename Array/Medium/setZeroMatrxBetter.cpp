@@ -1,31 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-void markRow(vector<vector<int>> &arr,int m,int i){
-    for(int j=0;j<m;j++){
-        if(arr[i][j]!=0){
-            arr[i][j]=-1;
-        }
-    }
-}
-void markCol(vector<vector<int>> &arr,int n,int j){
-    for(int i=0;i<n;i++){
-        if(arr[i][j]!=0){
-            arr[i][j]=-1;
-        }
-    }
-}
-void zeroMatrix(vector<vector<int>> &arr, int n, int m){
+void zeroMatrix(vector<vector<int>>&arr,int n,int m){
+    int col[m]={0};
+    int row[n]={0};
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             if(arr[i][j]==0){
-                markRow(arr,m,i);
-                markCol(arr,n,j);
+                col[j]=1;
+                row[i]=1;
             }
         }
     }
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            if(arr[i][j]==-1){
+            if(row[i] || col[j]){
                 arr[i][j]=0;
             }
         }
@@ -33,12 +21,12 @@ void zeroMatrix(vector<vector<int>> &arr, int n, int m){
 }
 int main(){
     int n;
-    cout<<"Enter the number of rows : ";
+    cout<<"enter the number of rows : ";
     cin>>n;
     int m;
     cout<<"Enter the number of columns : ";
     cin>>m;
-    vector<vector<int>> arr(n, vector<int>(m));
+    vector<vector<int>>arr(n,vector<int>(m));
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cin>>arr[i][j];
