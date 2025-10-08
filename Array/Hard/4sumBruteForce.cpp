@@ -7,9 +7,11 @@ vector<vector<int>>sum(vector<int>&arr,int n,int target){
             for(int k=j+1;k<n;k++){
                 for(int m=k+1;m<n;m++){
                     long long sum=arr[i]+arr[j];
-                    sum+=arr[k]+arr[m];
+                    sum+=arr[k];
+                    sum+=arr[m];
                     if(sum==target){
                         vector<int>quad={arr[i],arr[j],arr[k],arr[m]};
+                        sort(quad.begin(),quad.end());
                         st.insert(quad);
                     }
                 }
