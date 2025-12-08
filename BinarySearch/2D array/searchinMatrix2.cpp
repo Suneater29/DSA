@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool search(vector<vector<int>>&arr,int n,int m, int target){
+bool search(vector<vector<int>>&arr,int n,int m,int target){
     int row=0;
     int col=m-1;
     while(row<n && col>=0){
@@ -27,7 +27,7 @@ int main(){
             cin>>arr[i][j];
         }
     }
-    cout<<"The matrix is : "<<endl ;
+    cout<<"The matrix is : "<<endl;
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cout<<arr[i][j]<<" ";
