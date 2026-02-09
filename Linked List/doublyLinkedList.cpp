@@ -30,7 +30,7 @@ Node* convertarr2DLL(vector<int>&arr,int n){
     }
     return head;
 }
-void print(Node* head){
+void print(Node* head){ 
     while(head!=NULL){
         cout<<head->data<<" ";
         head=head->next; 

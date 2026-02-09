@@ -9,23 +9,28 @@ struct Node{
         next=nullptr;
     }
 };
-int middle(Node* head){
+Node* segregate(Node* head){
+    vector<int>arr;
     Node* temp=head;
-    int cnt=0;
-    while(temp->next!=nullptr){
-        cnt++;
-        temp=temp->next;
+    while(temp!=nullptr || temp->next!=nullptr){
+        arr.push_back(temp->data);
+        temp=temp->next->next;
     }
+    if(temp) arr.push_back(temp->data);
+    temp=head->next;
+    while(temp!=nullptr || temp->next!=nullptr){
+        arr.push_back(temp->data);
+        temp=temp->next->next;
+    }
+    if(temp) arr.push_back(temp->data);
     temp=head;
-    int mid=(cnt/2)+1;
-    while(temp->next!=nullptr){
-        mid=mid-1;
-        if(mid==0){
-            break;
-        }
+    int i=0;
+    while(temp!=nullptr){
+        temp->data=arr[i];
+        i++;
         temp=temp->next;
     }
-    return temp->data;
+    return head;
 }
 int main(){
     int n;
@@ -41,6 +46,6 @@ int main(){
         temp->next = new Node(arr[i]);
         temp = temp->next;
     }
-    cout<<middle(head);
+    segregate(head);
     return 0; 
 }

@@ -9,19 +9,20 @@ struct Node{
         next=nullptr;
     }
 };
-int middle(Node* head){
+Node* middle(Node* head){
+    if(head==nullptr || head->next==nullptr) return head;
     Node* slow=head;
     Node* fast=head;
     while(fast!=nullptr && fast->next!=nullptr){
-        slow=slow->next;
         fast=fast->next->next;
+        slow=slow->next;
     }
-    return slow->data;
+    return slow;
 }
 int main(){
     int n;
     cin>>n;
-    if(n==0) return 0;
+    if(n0) return 0;
     vector<int>arr(n);
     for(int i=0;i<n;i++){
         cin>>arr[i];
@@ -32,6 +33,9 @@ int main(){
         temp->next = new Node(arr[i]);
         temp = temp->next;
     }
-    cout<<middle(head);
+    Node* mid=middle(head);
+    if(mid!=nullptr){
+        cout<<mid->data;
+    }
     return 0; 
 }
