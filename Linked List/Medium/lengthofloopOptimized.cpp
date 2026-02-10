@@ -10,18 +10,24 @@ struct Node{
         next=next1;
     }
 };
+int findlength(Node* slow,Node* fast){
+    int cnt=1;
+    fast=fast->next;
+    while(slow!=fast){
+        fast=fast->next;
+        cnt++;
+    }
+    return cnt;
+}
 int length(Node* head){
-    unordered_map<Node*,int>mpp;
-    int timer=1;
-    Node* temp=head;
-    while(temp!=nullptr){
-        if(mpp.find(temp)!=mpp.end()){
-            int value=mpp[temp];
-            return (timer-value);
+    Node* slow=head;
+    Node* fast=head;
+    while(fast!= nullptr && fast->next!=nullptr){
+        fast=fast->next->next;
+        slow=slow->next;
+        if(slow==fast){
+            return findlength(slow,fast);
         }
-        mpp[temp]=timer;
-        timer++;
-        temp=temp->next;
     }
     return 0;
 }

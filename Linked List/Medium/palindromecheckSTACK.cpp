@@ -10,20 +10,20 @@ struct Node{
         next=next1;
     }
 };
-int length(Node* head){
-    unordered_map<Node*,int>mpp;
-    int timer=1;
+bool palindrome(Node* head){
+    stack<Node*>st;
     Node* temp=head;
     while(temp!=nullptr){
-        if(mpp.find(temp)!=mpp.end()){
-            int value=mpp[temp];
-            return (timer-value);
-        }
-        mpp[temp]=timer;
-        timer++;
+        st.push(temp);
         temp=temp->next;
     }
-    return 0;
+    temp=head;
+    while(temp!=nullptr){
+        if(temp->data!=st.top()->data) return false;
+        temp=temp->next;
+        st.pop();
+    }
+    return true;
 }
 int main(){
     vector<int>arr={2,5,8,7};
