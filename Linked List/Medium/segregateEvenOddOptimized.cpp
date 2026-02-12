@@ -10,26 +10,19 @@ struct Node{
     }
 };
 Node* segregate(Node* head){
-    vector<int>arr;
-    Node* temp=head;
-    while(temp!=nullptr || temp->next!=nullptr){
-        arr.push_back(temp->data);
-        temp=temp->next->next;
+    if(head==nullptr || head->next==nullptr){
+        return head;
     }
-    if(temp) arr.push_back(temp->data);
-    temp=head->next;
-    while(temp!=nullptr || temp->next!=nullptr){
-        arr.push_back(temp->data);
-        temp=temp->next->next;
+    Node* odd=head;
+    Node* even=head->next;
+    Node* evenhead=head->next;
+    while(even!=nullptr && even->next!=nullptr){
+        odd->next=even->next;
+        odd=odd->next;
+        even->next=odd->next;
+        even=even->next;
     }
-    if(temp) arr.push_back(temp->data);
-    temp=head;
-    int i=0;
-    while(temp!=nullptr){
-        temp->data=arr[i];
-        temp=temp->next;
-        i++;
-    }
+    odd->next=evenhead;
     return head;
 }
 int main(){
