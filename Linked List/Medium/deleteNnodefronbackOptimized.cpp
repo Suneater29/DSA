@@ -1,5 +1,4 @@
 //we will use slow and fast pointers in this solution , but move each only one step
-//This method uses no reversal but simple mathematica
 #include<bits/stdc++.h>
 using namespace std;
 struct Node{
