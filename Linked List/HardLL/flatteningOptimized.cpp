@@ -9,28 +9,37 @@ class Node {
  		Node(int x) : data(x), next(nullptr), child(nullptr) {}
  		Node(int x, Node *next, Node *child) : data(x), next(next), child(child) {}
 };
-Node* arrtoLL(vector<int>&arr){
+Node* merge(Node* head,Node* mergehead){
+    Node* t1=head;
+    Node* t2=mergehead;
     Node* dummy=new Node(-1);
-    Node* temp=dummy;
-    for (int i=0; i < arr.size(); i++) {
-        temp->child = new Node(arr[i]);
-        temp = temp->child;
+    Node* tail=dummy;
+    t1->next=nullptr;
+    t2->next=nullptr;
+    while(t1!=nullptr && t2!=nullptr){
+        if(t1->data < t2->data){
+            tail->child=t2;
+            tail=t2;
+            t2=t2->child;
+        }
+        else{
+            tail->child=t1;
+            tail=t1;
+            t1=t1->child;
+        }
+        tail->next=nullptr;
     }
+    if(t1!=nullptr) tail->child=t1;
+    else tail->child=t2;
     return dummy->child;
 }
 Node* flattenLinkedList(Node* head) 
 {
-    vector<int>arr;
-    while(head!=nullptr){
-        Node* temp=head;
-        while(temp!=nullptr){
-            arr.push_back(temp->data);
-            temp=temp->child;
-        }
-        head=head->next;
-    }
-    sort(arr.begin(),arr.end());
-    return arrtoLL(arr);
+    if(head==nullptr || head->next==nullptr) return head;
+    Node* mergehead=flattenLinkedList(head->next);
+    head=merge(head,mergehead);
+    head->next=nullptr;
+    return head;
 }
 int main(){
     int n;
