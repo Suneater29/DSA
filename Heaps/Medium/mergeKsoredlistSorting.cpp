@@ -1,4 +1,3 @@
-//we have to find the starting point of the loop (if exist) in linked list
 #include<bits/stdc++.h>
 using namespace std;
 struct Node{
