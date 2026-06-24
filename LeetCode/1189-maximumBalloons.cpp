@@ -12,6 +12,5 @@ int main(){
     cin>>s;
     int ans=maxballoon(s);
     cout<<ans;
-
     return 0;
 }
