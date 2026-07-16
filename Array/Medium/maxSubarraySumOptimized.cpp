@@ -4,8 +4,6 @@ int maximum(vector<int>&arr,int n){
     int maxi=INT_MIN;
     int sum=0;
     for(int i=0;i<n;i++){
-        // int start=0;
-        // int end=i;
         sum=sum+arr[i];
         maxi=sum;
     }
