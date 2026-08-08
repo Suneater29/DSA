@@ -1,1 +1,1 @@
-A collection of DSA problems solved by me . Contains all the DSA problems topicwise with multiple approaches 
+A collection of DSA problems solved by me from Striver's A2Z DSA sheet . Contains all the DSA problems topic-wise with multiple approaches 
