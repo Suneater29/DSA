@@ -26,11 +26,11 @@ vector<int> levelOrder(Node* root) {
         }
         ans.push_back(level);
     }
-    vector<int>rightView;
+    vector<int>leftView;
     for(auto it:ans){
-        rightView.push_back(it.back());
+        leftView.push_back(it.front());
     }
-    return rightView;
+    return leftView;
 }
 int main(){
     cout<<"height";
