@@ -28,6 +28,6 @@ vector<int> inorderTraversal(Node* root) {
     return inorder;
 }
 int main(){
-    cout<<"traversal";
+    cout<<"iterative inorder traversal";
     return 0;
 }

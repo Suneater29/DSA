@@ -21,6 +21,6 @@ bool isSymmetric(Node* root)
     return mirror(root->left,root->right);
 }
 int main(){
-    cout<<"height";
+    cout<<"symmetric tree";
     return 0;
 }

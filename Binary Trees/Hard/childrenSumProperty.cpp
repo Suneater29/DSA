@@ -24,6 +24,6 @@ bool isParentSum(Node *root){
     return (isParentSum(root->left) && isParentSum(root->right)); 
 }
 int main(){
-    cout<<"height";
+    cout<<"children sum property";
     return 0; 
 }

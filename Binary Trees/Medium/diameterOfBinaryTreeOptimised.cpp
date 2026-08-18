@@ -22,6 +22,6 @@ int findDiameter(Node* root){
     return diameter;
 }
 int main(){
-    cout<<"height";
+    cout<<"Diameter by optimised approach";
     return 0;
 }

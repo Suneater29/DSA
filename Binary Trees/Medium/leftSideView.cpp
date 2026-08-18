@@ -33,6 +33,6 @@ vector<int> levelOrder(Node* root) {
     return leftView;
 }
 int main(){
-    cout<<"height";
+    cout<<"view from left side";
     return 0;
 }

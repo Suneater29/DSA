@@ -23,6 +23,6 @@ bool isBalancedBT(Node* root){
     return true;
 }
 int main(){
-    cout<<"height";
+    cout<<"check if tree is balanced or not";
     return 0;
 }

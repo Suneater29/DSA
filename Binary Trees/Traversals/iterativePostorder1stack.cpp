@@ -39,6 +39,6 @@ vector<int> postorderTraversal(Node* root) {
     return postorder;
 }
 int main(){
-    cout<<"traversal";
+    cout<<"iterative postorder traversal using 1 stack";
     return 0;
 }

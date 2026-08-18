@@ -45,6 +45,6 @@ vector<vector<int>> getTreeTraversal(Node* root){
     return ans;
 }
 int main(){
-    cout<<"traversal";
+    cout<<"all traversals in one go using stack";
     return 0;
 }

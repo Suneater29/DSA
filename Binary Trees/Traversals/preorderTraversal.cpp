@@ -21,6 +21,6 @@ vector<int>traversal(Node* root){
     return preorder;
 }
 int main(){
-    cout<<"traversal";
+    cout<<"preorder traversal";
     return 0;
 }

@@ -24,6 +24,6 @@ vector<int> rightSideView(Node* root) {
 }
 
 int main(){
-    cout<<"height";
+    cout<<"right side view using recursion approach";
     return 0;
 }

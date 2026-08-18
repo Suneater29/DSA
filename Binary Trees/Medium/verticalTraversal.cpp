@@ -35,6 +35,6 @@ vector<vector<int>> verticalTraversal(Node* root) {
 }
 
 int main(){
-    cout<<"height";
+    cout<<"travesal vertically";
     return 0;
 }

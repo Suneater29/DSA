@@ -18,6 +18,6 @@ int maxDepth(Node* root) {
         return 1+max(leftDepth,rightDepth);
     }
 int main(){
-    cout<<"height";
+    cout<<"depth using recursion";
     return 0;
 }

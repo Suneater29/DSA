@@ -22,6 +22,6 @@ int maxPathSum(Node* root) {
         return maxi;
 }
 int main(){
-    cout<<"height";
+    cout<<"max sum of a path";
     return 0;
 }

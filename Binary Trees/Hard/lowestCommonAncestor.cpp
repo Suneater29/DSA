@@ -20,6 +20,6 @@ Node* lowestCommonAncestor(Node* root, Node* p, Node* q) {
     else return root;
 }
 int main(){
-    cout<<"height";
+    cout<<"lowest commmon ancestor";
     return 0; 
 }

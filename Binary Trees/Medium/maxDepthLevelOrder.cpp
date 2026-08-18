@@ -33,6 +33,6 @@ int maxDepth(Node* root) {
         return height;
     }
 int main(){
-    cout<<"height";
+    cout<<"max depth";
     return 0;
 }

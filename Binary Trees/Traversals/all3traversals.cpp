@@ -37,6 +37,6 @@ vector<vector<int>>traversal(Node* root){
     return{inorder,preorder,postorder};
 }
 int main(){
-    cout<<"traversal";
+    cout<<"all travesal in one go recursion";
     return 0;
 }

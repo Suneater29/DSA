@@ -33,6 +33,6 @@ int maximumWidth(Node* root){
     return maxwidth;
 }
 int main(){
-    cout<<"height";
+    cout<<"maximum width of binary tree";
     return 0; 
 }

@@ -21,6 +21,6 @@ vector<int>traversal(Node* root){
     return inorder;
 }
 int main(){
-    cout<<"traversal";
+    cout<<"inorder traversal";
     return 0;
 }

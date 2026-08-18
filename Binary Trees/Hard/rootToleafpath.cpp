@@ -27,6 +27,6 @@ vector<vector<int>> paths(Node* root) {
     return ans;
 }
 int main(){
-    cout<<"height";
+    cout<<"root to leaf path in binary tree";
     return 0;
 }

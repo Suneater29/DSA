@@ -47,6 +47,6 @@ vector<int> boundaryTraversal(Node *root) {
     return ans;
 }
 int main(){
-    cout<<"height";
+    cout<<"boundary traversal";
     return 0;
 }

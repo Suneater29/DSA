@@ -25,6 +25,6 @@ int diameterOfBinaryTree(Node* root) {
     return max(dia,max(leftDia,rightDia));
 }
 int main(){
-    cout<<"height";
+    cout<<"diameter of binary tree Brute Force";
     return 0;
 }

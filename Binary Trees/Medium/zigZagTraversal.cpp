@@ -38,6 +38,6 @@ vector<vector<int>> zigzagLevelOrder(Node* root) {
     return ans;
 }
 int main(){
-    cout<<"height";
+    cout<<"zig zag travesal";
     return 0;
 }
