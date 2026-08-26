@@ -9,6 +9,7 @@ struct Node{
         left=right=nullptr;
     }
 };
+
 class Solution {
 private: 
     Node*first;
@@ -32,7 +33,7 @@ private:
         prev=root;
         inorder(root->right);
     }
-    
+
 public:
     void recoverTree(Node*root) {
         first=middle=last=nullptr;
