@@ -39,6 +39,6 @@ class Solution {
     }
 };
 int main(){
-    cout<<"construct BST from preorder traversal";
+    cout<<"largest BST from BT";
     return 0;
 }
