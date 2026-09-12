@@ -42,7 +42,6 @@ int solve(vector<vector<char>>& board) {
     }
     return ans;
 }
-
 int main(){
     cout<<"number of enclaves";
     return 0;
