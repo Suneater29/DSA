@@ -12,7 +12,7 @@ bool check(int start,vector<int> &color,vector<vector<int>> &graph){
                 color[it]=!color[node];
                 q.push(it);
             }
-            else if(color[it]==color[node]) return false;
+            else if(color[it]==color[node]) return false; 
         }
     }
     return true;
