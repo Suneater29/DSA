@@ -58,7 +58,7 @@ string findOrder(vector<string>& words) {
             uniqueChars++;
         }
     }
-    if(ans.size() != uniqueChars){
+    if(ans.size()!=uniqueChars){
         return "";
     }
     return ans;
