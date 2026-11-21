@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// we have to reach the last row 
+
+
+
 //Recursive 
 // int path(int row,int col,vector<vector<int>> &arr,int n){
 //     if(col<0 || col>=n) return INT_MAX;
