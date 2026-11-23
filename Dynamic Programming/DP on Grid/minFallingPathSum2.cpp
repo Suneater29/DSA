@@ -2,7 +2,7 @@
 using namespace std;
 
 
-// we have to reach the last cell i.e. : (n-1)(m-1)
+// we have to reach the last cell i.e. : (n-1)(m-1) from variable starting point in first row
 
 // Recursive 
 // int path(int row,int col,vector<vector<int>> &arr,int n,int m){

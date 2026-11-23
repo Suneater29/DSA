@@ -2,9 +2,7 @@
 using namespace std;
 
 
-// we have to reach the last row 
-
-
+// we have to reach the last row from variable starting point in first row
 
 //Recursive 
 // int path(int row,int col,vector<vector<int>> &arr,int n){
