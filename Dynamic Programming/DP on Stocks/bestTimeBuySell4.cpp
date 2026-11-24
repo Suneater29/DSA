@@ -2,8 +2,6 @@
 using namespace std;
 
 //we can buy and sell stock k number of times so we get the maximum profit
-
-
 int main(){
     int n;
     cin>>n;
